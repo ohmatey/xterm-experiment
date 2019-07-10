@@ -13,7 +13,10 @@
     "xterm": "^3.14.4"
   },
   "scripts": {
+    "removeXtermSampleFolder": "rm -rf node_modules/react-xterm/node_modules/xterm/dist/addons/zmodem/demo",
+    "prestart": "npm run removeXtermSampleFolder",
     "start": "react-app-rewired start",
+    "prebuild": "npm run removeXtermSampleFolder",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
